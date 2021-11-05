@@ -1,5 +1,5 @@
-% input data raw IMU data from mpu9250 
-% data :time accelerometer  gyroscope   magnetometer 
+%  input data raw IMU data from mpu9250 
+%  data :time accelerometer  gyroscope   magnetometer 
 %  cal_acc=Ta*Ka*(raw_acc+Ba)
 %  cal_gyro=Tg*Kg*(raw_gyro+Bg)
 %  cal_mag=Tm2a*(raw_mag+Bm)
