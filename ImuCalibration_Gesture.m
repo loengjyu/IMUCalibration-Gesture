@@ -12,6 +12,7 @@ clc
 
 load caldata.mat;
 
+% FindFixData，找出不动的时候的数据?
 [~,fix_point,rotation]=FindFixData(cal_data,30);
 
 [Ta,Ka,Ba]=ICRA2014_acc(fix_point);
