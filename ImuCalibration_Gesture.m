@@ -1,4 +1,3 @@
-function [Ta,Ka,Ba,Tg,Kg,Bg,Tm2a,Bm,Vm,mag_strength]=ImuCalibration_Gesture(cal_data)
 % input data raw IMU data from mpu9250 
 % data :time accelerometer  gyroscope   magnetometer 
 %  cal_acc=Ta*Ka*(raw_acc+Ba)
@@ -7,6 +6,11 @@ function [Ta,Ka,Ba,Tg,Kg,Bg,Tm2a,Bm,Vm,mag_strength]=ImuCalibration_Gesture(cal_
 %
 % author  Zhang Xin
 
+close all;
+clear all;
+clc
+
+load caldata.mat;
 
 [~,fix_point,rotation]=FindFixData(cal_data,30);
 
@@ -31,4 +35,6 @@ Set_Bias_Gyro=[0.1,-0.4,1.5];
 
 See_Gesture( cal_data,Ta,Ka,Ba,Tg,Kg,Bg,Tm2a,Bm,Vm,Set_Bias_Gyro);
 
-end
+
+
+
